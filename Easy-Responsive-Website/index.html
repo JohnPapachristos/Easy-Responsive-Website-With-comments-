@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <!-- This is critical for a responsive website -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <head>
+        <!-- The <link is for style.css file in which all the css code is -->
+        <title>John Papachristos</title> 
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+        <!-- This is the scroll up button -->
+        <button onclick="topFunction()" id="up" title="Go to top">&uparrow;</button>
+        <!-- The div class container will be the key point for the responsive website because it will change for different resolutions-->
+        <div class="container">
+            
+            <!-- I prefer to put a header, content and footer for my website but you can put whatever you prefer -->
+            <!-- Sometimes I put css and in my html file cause it is faster(Here I put css for text aligment)-->
+            <header>
+                <h1 style="text-align: center;"> This is a responsive website </h1>
+            </header>
+            <menu>
+                <ul>
+                    <li><a class="active" href="#home">Home</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </menu>
+            <content>
+                <p style="text-align: center;"> Here you can put your content</p>
+            </content>
+            <footer><br>
+                <h1 style="text-align: center;"> Created by John Papachristos</h1>
+            </footer>
+            
+        </div>
+        <!-- With this tag and src i point to the code where the js code is for the up scroll button-->
+        <script src="javascript/javascript.js"></script>
+    </body>
+</html>

@@ -1,0 +1,156 @@
+/* First of all it is important to write the box-sizing code, and then for the tags you put, you have to write the grid-area code in order to use them in the media screen part*/
+* {
+    box-sizing:border-box;
+}
+
+body {
+    margin:0px;
+    width:100%;
+    min-height:100%;
+    background: linear-gradient(to top, rgb(189, 187, 187), #0690c7 100%);
+}
+
+header {
+    grid-area:h;
+    width:100%;
+}
+
+menu {
+    grid-area:m;
+    width:100%;
+    margin:0;
+    padding:0;
+    background-color: #333;
+    border-style: solid;
+    border-color: rgb(250, 245, 245);
+}
+
+content {
+    grid-area:c;
+    width:100%;
+}
+
+footer {
+    grid-area:f;
+    width:100%;
+}
+
+/* This is the code for the menu navbar*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+  
+li {
+    float: left;
+}
+  
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+li a:hover {
+    background-color: #111;
+}
+
+/* button for up scroll easy and fast to create */
+
+#up {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: darkblue;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+    border-color: white;
+}
+  
+#up:hover {
+    background-color: rgb(87, 87, 202);
+}
+
+/* As you see now, with the help of media screen for the resolutions I want i change the settings*/
+
+@media only screen and (min-width: 960px){
+    
+    div.container {
+		/*pc*/
+		max-width:100%;
+		margin:0;
+		padding:0;
+		display: grid;
+		grid-template-columns: repeat(8, 1fr);
+		grid-auto-rows: minmax(50px,auto);
+		grid-gap:20px;
+		grid-template-areas:
+					"h h h h h h h h"
+					"m m m m m m m m"
+					"c c c c c c c c"
+					"c c c c c c c c"
+					"c c c c c c c c"
+					"c c c c c c c c"
+					"f f f f f f f f";
+	}
+}
+
+@media only screen and (min-width: 600px) and (max-width: 960px){
+    /*tablets*/
+    ul,li{
+        width:100%;
+    }
+	div.container {
+		width:100%;
+		margin:0;
+		padding:10px;
+		display: grid;
+		grid-template-columns: repeat(8, 1fr);
+		grid-auto-rows: minmax(50px,auto);
+		grid-gap:10px;
+		grid-template-areas:
+					"h h h h h h h h"
+					"m m m m m m m m"
+					"c c c c c c c c"
+					"c c c c c c c c"
+					"c c c c c c c c"
+					"c c c c c c c c"
+					"f f f f f f f f";
+	}
+}
+
+@media only screen and (max-width: 600px){
+	/*smartphones*/
+    ul,li{
+        width:100%;
+    }
+	div.container {
+		width:100%;
+		margin:0;
+		padding:1px;
+		display: grid;
+		grid-template-columns: repeat(8, 1fr);
+		grid-auto-rows: minmax(50px,auto);
+		grid-gap:10px;
+		grid-template-areas:
+					"h h h h h h h h"
+					"m m m m m m m m"
+					"c c c c c c c c"
+					"c c c c c c c c"
+					"c c c c c c c c"
+					"c c c c c c c c"
+					"f f f f f f f f";
+	}
+}
